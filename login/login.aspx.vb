@@ -6,7 +6,7 @@ Partial Class login_login
 
         If Roles.IsUserInRole(login_Admin.UserName, "r_ajkisling_Admin") = True Then
 
-            Response.Redirect("~/admin/detailsView.aspx")
+            Response.Redirect("~/admin/vehicleDetailsAdmin.aspx")
 
         Else : Response.Redirect("~/gridView.aspx")
 

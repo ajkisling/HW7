@@ -1,2 +1,99 @@
-﻿body {
+﻿body {background-color:#ffffdc;
+      font-family:Century Gothic;
+}
+
+h1 {
+    font-weight:bold;
+    font-size:30pt;
+}
+h2 {
+    font-weight:bold;
+    font-size:24pt;
+}
+
+#container {
+    background-color:#fbfbb7;
+    padding:20px;
+    margin:0 auto;
+    border:1px solid black;
+    width:900px;
+}
+
+#header {
+    background-color:lightblue;
+    color:black;
+    padding:10px;
+    margin:0 auto;
+    width:642px;
+    height:150px;
+    float:left;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    text-align:center;
+}
+
+#right_header {
+    background-color:blue;
+    padding:10px;
+    margin:0 auto;
+    float:left;
+    height:150px;
+    border-top:1px solid black;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+}
+
+#main {
+    background-color:white;
+    color:black;
+    padding:10px;
+    margin:0 auto;
+    border-right:1px solid black;
+    border-left:1px solid black;
+}
+
+#footer {
+    padding:10px;
+    margin:0 auto;
+    border:1px solid black;
+    text-align:center;
+    font-size:8pt;
+    font-variant:small-caps;
+    font-weight:bold;
+}
+/* Menu from www.cssnewbie.com/super-simple-horizontal-navigation-bar/#.VE-eFx3F_tX */
+#nav {
+    width:898px;
+    float:left;
+    margin:0 0 3em 0;
+    padding:0;
+    list-style:none;
+    background-color:#578d5b;
+    border:1px solid black;
+}
+
+#nav li {
+    float:left;
+}
+
+#nav li a {
+    display:block;
+    padding:8px 15px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fbfbb7;
+    border-right: 1px solid #ccc;
+}
+
+#nav li a:hover {
+    color:black;
+    background-color:#fbfbb7;
+}
+/* End menu */
+
+.center_img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
