@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="login.aspx.vb" Inherits="login_login" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
+    
+        <asp:Login ID="login_Admin" runat="server">
+        </asp:Login>
     
     </div>
     </form>
