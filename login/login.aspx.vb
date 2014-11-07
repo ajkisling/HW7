@@ -6,11 +6,17 @@ Partial Class login_login
 
         If Roles.IsUserInRole(login_Admin.UserName, "r_ajkisling_Admin") = True Then
 
-            Response.Redirect("~/admin/vehicleDetailsAdmin.aspx")
+            Response.Redirect("~/admin/DefaultAdmin.aspx")
 
-        Else : Response.Redirect("~/gridView.aspx")
+        Else : Response.Redirect("~/Default.aspx")
 
         End If
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        login_Admin.Focus()
 
     End Sub
 End Class
