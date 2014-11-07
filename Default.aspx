@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> RIP-OFF RALPH'S Quality Auto Sales
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
+    <h4><asp:Label ID="lbl_welcomeDate" runat="server" Text=""></asp:Label></h4>
+
     <asp:SqlDataSource ID="sql_selectVehicle" runat="server" ConnectionString="<%$ ConnectionStrings:ajkisling_Vehicles_HW7 %>" SelectCommand="SELECT * FROM [ajkisling_Vehicles_HW7]"></asp:SqlDataSource>
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="VehicleID" DataSourceID="sql_selectVehicle" Width="877px">
     <Columns>

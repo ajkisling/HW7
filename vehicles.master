@@ -18,19 +18,22 @@
         <div id="header">
             <h1>RIP-OFF RALPH'S</h1>
             <h2>Quality Auto Sales</h2>
+
         </div>  <!--close the header div -->
 
-        <div id="right header">
-            <img src="./logo.jpg" style="height: 170px; width: 235px" />
+        <div id="right header">   
+
+            <asp:Image ID="logo" runat="server" Height="172px" ImageUrl="~/css/logo.jpg" Width="235px" />   
+
         </div>  <!--close the right div -->
 
         <div id="menu">
             <ul id="nav">
-                <li><a href="Default.aspx">Home</a></li>
-                <li><a href="search.aspx">Search</a></li>
-                <li><a href="about.aspx">About</a></li>
-                <li><a href="contact.aspx">Contact</a></li>
-                <li><a href="./login/login.aspx">Login</a></li>
+                <li><asp:HyperLink ID="link_Home" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_Search" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_About" runat="server" NavigateUrl="~/about.aspx">About</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_Contact" runat="server" NavigateUrl="~/contact.aspx">Contact</asp:HyperLink></li>
+                <li><asp:HyperLink ID="link_Login" runat="server" NavigateUrl="~/login/login.aspx">Login</asp:HyperLink></li>
             </ul>
         </div>
 
