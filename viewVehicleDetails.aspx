@@ -1,23 +1,16 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/vehicles.master" AutoEventWireup="false" CodeFile="search.aspx.vb" Inherits="search" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/vehicles.master" AutoEventWireup="false" CodeFile="viewVehicleDetails.aspx.vb" Inherits="viewVehicleDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    RIP-OFF RALPH'S - Search
+    RIP-OFF RALPH'S - View Vehicle Details
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="sql_search" runat="server" ConnectionString="<%$ ConnectionStrings:ajkisling_Vehicles_HW7 %>" SelectCommand="SELECT * FROM [ajkisling_Vehicles_HW7]"></asp:SqlDataSource>
-    
-    <% If Not IsPostBack Then%>
-    
-    Search by make or model:&nbsp;
-    <asp:TextBox ID="tb_search" runat="server"></asp:TextBox>
-    <br />
-    
-    <% Else%>
-    Search by make or model again:&nbsp;
-    <asp:TextBox ID="tb_searchPostback" runat="server"></asp:TextBox>
-    <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="VehicleID" DataSourceID="sql_search">
-        <Columns>
+    <asp:SqlDataSource ID="sql_viewDetails" runat="server" ConnectionString="<%$ ConnectionStrings:ajkisling_Vehicles_HW7 %>" SelectCommand="SELECT * FROM [ajkisling_Vehicles_HW7] WHERE ([VehicleID] = @VehicleID)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="VehicleID" QueryStringField="VehicleID" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="VehicleID" DataSourceID="sql_viewDetails" Height="50px" Width="508px">
+        <Fields>
             <asp:BoundField DataField="VIN" HeaderText="VIN" SortExpression="VIN" />
             <asp:BoundField DataField="Year" HeaderText="Year" SortExpression="Year" />
             <asp:BoundField DataField="Manufacturer" HeaderText="Manufacturer" SortExpression="Manufacturer" />
@@ -28,8 +21,7 @@
             <asp:BoundField DataField="InteriorColor" HeaderText="Interior Color" SortExpression="InteriorColor" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:BoundField DataField="Condition" HeaderText="Condition" SortExpression="Condition" />
-        </Columns>
-    </asp:GridView>
-    <% End If %>
+        </Fields>
+    </asp:DetailsView>
 </asp:Content>
 

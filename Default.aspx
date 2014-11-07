@@ -14,9 +14,9 @@
         <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price">
         <ItemStyle HorizontalAlign="Right" />
         </asp:BoundField>
-        <asp:CommandField ShowSelectButton="True">
+        <asp:HyperLinkField DataNavigateUrlFields="VehicleID" DataNavigateUrlFormatString="viewVehicleDetails.aspx?VehicleID={0}" Text="Select">
         <ItemStyle HorizontalAlign="Center" />
-        </asp:CommandField>
+        </asp:HyperLinkField>
     </Columns>
 </asp:GridView>
 </asp:Content>
